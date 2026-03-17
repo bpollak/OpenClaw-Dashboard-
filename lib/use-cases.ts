@@ -191,19 +191,4 @@ export const USE_CASES: UseCase[] = [
     icon: "📋",
     tags: ["Calendar", "Email", "Teams", "Meetings"],
   },
-  {
-    id: "job-monitor",
-    title: "UC Campus Job Monitor",
-    category: "Intelligence",
-    description: "Watches for executive IT and health IT leadership roles at southern UC campuses with compensation over $250K.",
-    howItWorks: [
-      "Weekly search of UC campus job postings",
-      "Filters: IT/Health IT leadership, southern UC campuses, comp >$250K",
-      "Delivers new postings to Telegram immediately when found",
-    ],
-    outcome: "Never miss a relevant executive opportunity or competitive talent movement.",
-    status: "building",
-    icon: "👔",
-    tags: ["UC System", "Jobs", "Intelligence"],
-  },
 ];
