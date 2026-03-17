@@ -10,7 +10,7 @@ const handler = NextAuth({
       },
       async authorize(credentials) {
         if (credentials?.password === process.env.DASHBOARD_PASSWORD) {
-          return { id: "1", name: "Brett Pollak", email: "bpollak@ucsd.edu" };
+          return { id: "1", name: "Brett Pollak", email: "brett@henry.ai" };
         }
         return null;
       },
