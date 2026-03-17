@@ -65,7 +65,6 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-900 leading-tight">{uc.title}</h3>
-              <p className="text-xs text-slate-400 mt-0.5">{uc.category}</p>
             </div>
           </div>
           <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold shrink-0 ${status.bg} ${status.text}`}>
