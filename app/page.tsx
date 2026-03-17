@@ -1,15 +1,47 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { USE_CASES } from "@/lib/use-cases";
+import { CRON_MAP, formatRelativeTime, formatNextRun } from "@/lib/cron-map";
+import { CronJobStatus } from "@/app/api/cron-status/route";
 import UseCaseCard from "@/components/UseCaseCard";
 import StatsBar from "@/components/StatsBar";
 import Header from "@/components/Header";
+import { exec } from "child_process";
+import { promisify } from "util";
 
+const execAsync = promisify(exec);
 const INFRA_CATEGORIES = ["Data Sources", "Infrastructure"];
+
+async function getLiveCronStatus(): Promise<Record<string, CronJobStatus>> {
+  try {
+    const { stdout } = await execAsync("openclaw cron list --json 2>/dev/null", {
+      env: { ...process.env, PATH: "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin" },
+    });
+    const data = JSON.parse(stdout);
+    const map: Record<string, CronJobStatus> = {};
+    for (const j of data.jobs || []) {
+      map[j.name] = {
+        id: j.id,
+        name: j.name,
+        enabled: j.enabled,
+        lastStatus: j.state?.lastStatus ?? null,
+        lastRunAtMs: j.state?.lastRunAtMs ?? null,
+        lastDelivered: j.state?.lastDelivered ?? null,
+        nextRunAtMs: j.state?.nextRunAtMs ?? null,
+        lastDurationMs: j.state?.lastDurationMs ?? null,
+      };
+    }
+    return map;
+  } catch {
+    return {};
+  }
+}
 
 export default async function Dashboard() {
   const session = await getServerSession();
   if (!session) redirect("/login");
+
+  const cronStatus = await getLiveCronStatus();
 
   const automations = USE_CASES.filter((u) => !INFRA_CATEGORIES.includes(u.category));
   const infra = USE_CASES.filter((u) => INFRA_CATEGORIES.includes(u.category));
@@ -18,11 +50,24 @@ export default async function Dashboard() {
   const scheduled = automations.filter((u) => u.status === "scheduled").length;
   const building = automations.filter((u) => u.status === "building").length;
 
+  // Enrich each automation with live cron data
+  function getLiveMetrics(id: string) {
+    const cronName = CRON_MAP[id];
+    if (!cronName) return null;
+    const job = cronStatus[cronName];
+    if (!job) return null;
+    return {
+      lastRun: formatRelativeTime(job.lastRunAtMs),
+      nextRun: formatNextRun(job.nextRunAtMs),
+      lastStatus: job.lastStatus,
+      delivered: job.lastDelivered,
+    };
+  }
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
 
-      {/* Hero */}
       <div className="bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-8 py-10">
           <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Personal AI Infrastructure</p>
@@ -38,7 +83,6 @@ export default async function Dashboard() {
       <main className="max-w-7xl mx-auto px-8 py-10">
         <StatsBar active={active} scheduled={scheduled} building={building} total={automations.length} />
 
-        {/* Automations */}
         <section className="mb-14">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Automations</h2>
@@ -47,12 +91,11 @@ export default async function Dashboard() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {automations.map((uc) => (
-              <UseCaseCard key={uc.id} useCase={uc} />
+              <UseCaseCard key={uc.id} useCase={uc} liveMetrics={getLiveMetrics(uc.id)} />
             ))}
           </div>
         </section>
 
-        {/* Data Sources & Infrastructure */}
         <section className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Data Sources & Infrastructure</h2>
@@ -61,7 +104,7 @@ export default async function Dashboard() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {infra.map((uc) => (
-              <UseCaseCard key={uc.id} useCase={uc} />
+              <UseCaseCard key={uc.id} useCase={uc} liveMetrics={getLiveMetrics(uc.id)} />
             ))}
           </div>
         </section>

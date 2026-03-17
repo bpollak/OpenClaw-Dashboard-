@@ -1,4 +1,11 @@
 import { UseCase } from "@/lib/use-cases";
+
+interface LiveMetrics {
+  lastRun: string;
+  nextRun: string;
+  lastStatus: string | null;
+  delivered: boolean | null;
+}
 import {
   Calendar, Mail, Linkedin, TrendingUp,
   ClipboardList, Link2, Cpu, Zap, CheckCircle2, Clock
@@ -32,7 +39,7 @@ const statusConfig = {
   building:  { label: "In Development", dot: "bg-amber-400",              text: "text-amber-600",   bg: "bg-amber-50 border-amber-200" },
 };
 
-export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
+export default function UseCaseCard({ useCase: uc, liveMetrics }: { useCase: UseCase; liveMetrics?: ReturnType<any> | null }) {
   const accent = idAccent[uc.id] ?? idAccent["local-llm"];
   const status = statusConfig[uc.status];
   const icon = iconMap[uc.id] ?? <Zap className="w-5 h-5" />;
@@ -73,14 +80,35 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
         )}
 
         {/* Live metrics */}
-        {uc.livePreview && uc.livePreview.length > 0 && !isBuilding && (
+        {!isBuilding && (
           <div className="grid grid-cols-3 gap-2 mb-5">
-            {uc.livePreview.map((item) => (
-              <div key={item.label} className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                <div className="text-xs text-slate-400 mb-1">{item.label}</div>
-                <div className="text-xs font-bold text-slate-700">{item.value}</div>
-              </div>
-            ))}
+            {liveMetrics ? (
+              <>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
+                  <div className="text-xs text-slate-400 mb-1">Last run</div>
+                  <div className={`text-xs font-bold ${liveMetrics.lastStatus === "ok" ? "text-emerald-600" : liveMetrics.lastStatus === "error" ? "text-red-500" : "text-slate-700"}`}>
+                    {liveMetrics.lastRun}
+                  </div>
+                </div>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
+                  <div className="text-xs text-slate-400 mb-1">Next run</div>
+                  <div className="text-xs font-bold text-slate-700">{liveMetrics.nextRun}</div>
+                </div>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
+                  <div className="text-xs text-slate-400 mb-1">Delivered</div>
+                  <div className={`text-xs font-bold ${liveMetrics.delivered === true ? "text-emerald-600" : liveMetrics.delivered === false ? "text-amber-500" : "text-slate-400"}`}>
+                    {liveMetrics.delivered === true ? "Yes" : liveMetrics.delivered === false ? "No" : "—"}
+                  </div>
+                </div>
+              </>
+            ) : uc.livePreview ? (
+              uc.livePreview.map((item) => (
+                <div key={item.label} className="bg-slate-50 border border-slate-100 rounded-xl p-3">
+                  <div className="text-xs text-slate-400 mb-1">{item.label}</div>
+                  <div className="text-xs font-bold text-slate-700">{item.value}</div>
+                </div>
+              ))
+            ) : null}
           </div>
         )}
 
