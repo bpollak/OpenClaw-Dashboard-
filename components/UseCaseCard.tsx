@@ -15,27 +15,15 @@ const iconMap: Record<string, React.ReactNode> = {
   "pre-meeting-brief":  <Zap className="w-5 h-5" />,
 };
 
-const categoryAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing: string; bar: string }> = {
-  "Executive Intelligence": {
-    iconBg: "bg-indigo-50", iconColor: "text-indigo-600",
-    outcomeRing: "border-indigo-100 bg-indigo-50", bar: "bg-indigo-500",
-  },
-  "Thought Leadership": {
-    iconBg: "bg-violet-50", iconColor: "text-violet-600",
-    outcomeRing: "border-violet-100 bg-violet-50", bar: "bg-violet-500",
-  },
-  "Competitive Intelligence": {
-    iconBg: "bg-sky-50", iconColor: "text-sky-600",
-    outcomeRing: "border-sky-100 bg-sky-50", bar: "bg-sky-500",
-  },
-  "Data Sources": {
-    iconBg: "bg-teal-50", iconColor: "text-teal-600",
-    outcomeRing: "border-teal-100 bg-teal-50", bar: "bg-teal-500",
-  },
-  "Infrastructure": {
-    iconBg: "bg-slate-100", iconColor: "text-slate-600",
-    outcomeRing: "border-slate-100 bg-slate-50", bar: "bg-slate-400",
-  },
+const idAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing: string; bar: string }> = {
+  "morning-briefing":   { iconBg: "bg-amber-50",   iconColor: "text-amber-600",   outcomeRing: "border-amber-100 bg-amber-50",   bar: "bg-amber-400" },
+  "email-triage":       { iconBg: "bg-rose-50",    iconColor: "text-rose-600",    outcomeRing: "border-rose-100 bg-rose-50",    bar: "bg-rose-500" },
+  "linkedin-machine":   { iconBg: "bg-blue-50",    iconColor: "text-blue-600",    outcomeRing: "border-blue-100 bg-blue-50",    bar: "bg-blue-500" },
+  "tritongpt-intel":    { iconBg: "bg-emerald-50", iconColor: "text-emerald-600", outcomeRing: "border-emerald-100 bg-emerald-50", bar: "bg-emerald-500" },
+  "evening-reflection": { iconBg: "bg-violet-50",  iconColor: "text-violet-600",  outcomeRing: "border-violet-100 bg-violet-50",  bar: "bg-violet-500" },
+  "teams-integration":  { iconBg: "bg-teal-50",    iconColor: "text-teal-600",    outcomeRing: "border-teal-100 bg-teal-50",    bar: "bg-teal-500" },
+  "local-llm":          { iconBg: "bg-slate-100",  iconColor: "text-slate-600",   outcomeRing: "border-slate-100 bg-slate-50",  bar: "bg-slate-500" },
+  "pre-meeting-brief":  { iconBg: "bg-orange-50",  iconColor: "text-orange-600",  outcomeRing: "border-orange-100 bg-orange-50",  bar: "bg-orange-400" },
 };
 
 const statusConfig = {
@@ -45,7 +33,7 @@ const statusConfig = {
 };
 
 export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
-  const accent = categoryAccent[uc.category] ?? categoryAccent["Infrastructure"];
+  const accent = idAccent[uc.id] ?? idAccent["local-llm"];
   const status = statusConfig[uc.status];
   const icon = iconMap[uc.id] ?? <Zap className="w-5 h-5" />;
   const isBuilding = uc.status === "building";
