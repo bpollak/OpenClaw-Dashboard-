@@ -6,32 +6,16 @@ import { CronJobStatus } from "@/app/api/cron-status/route";
 import UseCaseCard from "@/components/UseCaseCard";
 import StatsBar from "@/components/StatsBar";
 import Header from "@/components/Header";
-import { exec } from "child_process";
-import { promisify } from "util";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-const execAsync = promisify(exec);
 const INFRA_CATEGORIES = ["Data Sources", "Infrastructure"];
 
-async function getLiveCronStatus(): Promise<Record<string, CronJobStatus>> {
+function getLiveCronStatus(): Record<string, CronJobStatus> {
   try {
-    const { stdout } = await execAsync("openclaw cron list --json 2>/dev/null", {
-      env: { ...process.env, PATH: "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin" },
-    });
-    const data = JSON.parse(stdout);
-    const map: Record<string, CronJobStatus> = {};
-    for (const j of data.jobs || []) {
-      map[j.name] = {
-        id: j.id,
-        name: j.name,
-        enabled: j.enabled,
-        lastStatus: j.state?.lastStatus ?? null,
-        lastRunAtMs: j.state?.lastRunAtMs ?? null,
-        lastDelivered: j.state?.lastDelivered ?? null,
-        nextRunAtMs: j.state?.nextRunAtMs ?? null,
-        lastDurationMs: j.state?.lastDurationMs ?? null,
-      };
-    }
-    return map;
+    const file = join(process.cwd(), "public", "live-status.json");
+    const data = JSON.parse(readFileSync(file, "utf-8"));
+    return data.jobs ?? {};
   } catch {
     return {};
   }
@@ -41,7 +25,7 @@ export default async function Dashboard() {
   const session = await getServerSession();
   if (!session) redirect("/login");
 
-  const cronStatus = await getLiveCronStatus();
+  const cronStatus = getLiveCronStatus();
 
   const automations = USE_CASES.filter((u) => !INFRA_CATEGORIES.includes(u.category));
   const infra = USE_CASES.filter((u) => INFRA_CATEGORIES.includes(u.category));

@@ -1,0 +1,41 @@
+{
+  "jobs": {
+    "graph-token-refresh": {
+      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773775688608,
+      "lastDelivered": false,
+      "nextRunAtMs": 1773779288608,
+      "lastDurationMs": 7596
+    },
+    "daily-reflection": {
+      "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773707400010,
+      "lastDelivered": true,
+      "nextRunAtMs": 1773793800000,
+      "lastDurationMs": 21669
+    },
+    "linkedin-post-machine": {
+      "id": "277a9379-229d-4401-8058-b46a24849dc5",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774051200000,
+      "lastDurationMs": null
+    },
+    "tritongpt-intel-sunday": {
+      "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774191600000,
+      "lastDurationMs": null
+    }
+  },
+  "updatedAt": 1773776555173
+}
