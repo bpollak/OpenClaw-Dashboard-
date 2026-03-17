@@ -1,7 +1,7 @@
 import { UseCase } from "@/lib/use-cases";
 import {
-  Calendar, Mail, Linkedin, Globe, Link2, Cpu,
-  ClipboardList, Zap, TrendingUp, CheckCircle2, Clock, Wrench
+  Calendar, Mail, Linkedin, TrendingUp,
+  ClipboardList, Link2, Cpu, Zap, CheckCircle2, Clock
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -15,61 +15,33 @@ const iconMap: Record<string, React.ReactNode> = {
   "pre-meeting-brief":  <Zap className="w-5 h-5" />,
 };
 
-const categoryAccent: Record<string, { border: string; glow: string; iconBg: string; iconColor: string }> = {
+const categoryAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing: string; bar: string }> = {
   "Executive Intelligence": {
-    border: "border-indigo-500/30",
-    glow: "hover:shadow-indigo-500/10",
-    iconBg: "bg-indigo-500/10",
-    iconColor: "text-indigo-400",
+    iconBg: "bg-indigo-50", iconColor: "text-indigo-600",
+    outcomeRing: "border-indigo-100 bg-indigo-50", bar: "bg-indigo-500",
   },
   "Thought Leadership": {
-    border: "border-violet-500/30",
-    glow: "hover:shadow-violet-500/10",
-    iconBg: "bg-violet-500/10",
-    iconColor: "text-violet-400",
+    iconBg: "bg-violet-50", iconColor: "text-violet-600",
+    outcomeRing: "border-violet-100 bg-violet-50", bar: "bg-violet-500",
   },
   "Competitive Intelligence": {
-    border: "border-sky-500/30",
-    glow: "hover:shadow-sky-500/10",
-    iconBg: "bg-sky-500/10",
-    iconColor: "text-sky-400",
+    iconBg: "bg-sky-50", iconColor: "text-sky-600",
+    outcomeRing: "border-sky-100 bg-sky-50", bar: "bg-sky-500",
   },
   "Data Sources": {
-    border: "border-teal-500/30",
-    glow: "hover:shadow-teal-500/10",
-    iconBg: "bg-teal-500/10",
-    iconColor: "text-teal-400",
+    iconBg: "bg-teal-50", iconColor: "text-teal-600",
+    outcomeRing: "border-teal-100 bg-teal-50", bar: "bg-teal-500",
   },
   "Infrastructure": {
-    border: "border-slate-500/30",
-    glow: "hover:shadow-slate-500/10",
-    iconBg: "bg-slate-500/10",
-    iconColor: "text-slate-400",
+    iconBg: "bg-slate-100", iconColor: "text-slate-600",
+    outcomeRing: "border-slate-100 bg-slate-50", bar: "bg-slate-400",
   },
 };
 
 const statusConfig = {
-  active: {
-    label: "Live",
-    dot: "bg-emerald-400",
-    text: "text-emerald-400",
-    bg: "bg-emerald-400/10",
-    pulse: true,
-  },
-  scheduled: {
-    label: "Scheduled",
-    dot: "bg-sky-400",
-    text: "text-sky-400",
-    bg: "bg-sky-400/10",
-    pulse: false,
-  },
-  building: {
-    label: "In Development",
-    dot: "bg-amber-400",
-    text: "text-amber-400",
-    bg: "bg-amber-400/10",
-    pulse: false,
-  },
+  active:    { label: "Live",           dot: "bg-emerald-500 pulse-live", text: "text-emerald-600", bg: "bg-emerald-50 border-emerald-200" },
+  scheduled: { label: "Scheduled",      dot: "bg-sky-400",                text: "text-sky-600",     bg: "bg-sky-50 border-sky-200" },
+  building:  { label: "In Development", dot: "bg-amber-400",              text: "text-amber-600",   bg: "bg-amber-50 border-amber-200" },
 };
 
 export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
@@ -79,37 +51,36 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
   const isBuilding = uc.status === "building";
 
   return (
-    <div className={`rounded-2xl bg-white/[0.04] border ${accent.border} hover:bg-white/[0.07] hover:shadow-xl ${accent.glow} transition-all duration-300 overflow-hidden ${isBuilding ? "opacity-60" : ""}`}>
+    <div className={`bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 ${isBuilding ? "opacity-70" : ""}`}>
 
-      {/* Top accent line */}
-      <div className={`h-px w-full ${isBuilding ? "bg-amber-500/20" : "bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent"}`} />
+      {/* Category color bar */}
+      <div className={`h-1 w-full ${accent.bar}`} />
 
       <div className="p-6">
-
-        {/* Header row */}
+        {/* Header */}
         <div className="flex items-start justify-between gap-3 mb-4">
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-xl ${accent.iconBg} ${accent.iconColor} flex items-center justify-center shrink-0`}>
               {icon}
             </div>
             <div>
-              <h3 className="text-sm font-bold text-white leading-tight">{uc.title}</h3>
-              <p className="text-xs text-white/40 mt-0.5">{uc.category}</p>
+              <h3 className="text-sm font-bold text-slate-900 leading-tight">{uc.title}</h3>
+              <p className="text-xs text-slate-400 mt-0.5">{uc.category}</p>
             </div>
           </div>
-          <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full ${status.bg} shrink-0`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${status.dot} ${status.pulse ? "animate-pulse" : ""}`} />
-            <span className={`text-xs font-medium ${status.text}`}>{status.label}</span>
+          <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold shrink-0 ${status.bg} ${status.text}`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
+            {status.label}
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm text-white/60 leading-relaxed mb-5">{uc.description}</p>
+        <p className="text-sm text-slate-500 leading-relaxed mb-4">{uc.description}</p>
 
-        {/* Schedule callout */}
+        {/* Schedule */}
         {uc.schedule && !isBuilding && (
-          <div className="flex items-center gap-2 mb-5 text-xs text-white/40">
-            <Clock className="w-3.5 h-3.5 shrink-0" />
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-4">
+            <Clock className="w-3.5 h-3.5" />
             <span>{uc.schedule}</span>
           </div>
         )}
@@ -118,9 +89,9 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
         {uc.livePreview && uc.livePreview.length > 0 && !isBuilding && (
           <div className="grid grid-cols-3 gap-2 mb-5">
             {uc.livePreview.map((item) => (
-              <div key={item.label} className="bg-white/[0.04] rounded-xl p-3 border border-white/[0.06]">
-                <div className="text-xs text-white/35 mb-1">{item.label}</div>
-                <div className="text-xs font-bold text-white/80 leading-tight">{item.value}</div>
+              <div key={item.label} className="bg-slate-50 border border-slate-100 rounded-xl p-3">
+                <div className="text-xs text-slate-400 mb-1">{item.label}</div>
+                <div className="text-xs font-bold text-slate-700">{item.value}</div>
               </div>
             ))}
           </div>
@@ -128,24 +99,24 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
 
         {/* How it works */}
         <div className="mb-5">
-          <p className="text-xs font-semibold text-white/25 uppercase tracking-widest mb-3">How it works</p>
-          <ol className="space-y-2.5">
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">How it works</p>
+          <ol className="space-y-2">
             {uc.howItWorks.map((step, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="flex-none w-5 h-5 rounded-full bg-white/[0.06] text-white/30 text-xs flex items-center justify-center font-bold mt-0.5">{i + 1}</span>
-                <span className="text-sm text-white/55 leading-relaxed">{step}</span>
+                <span className="flex-none w-5 h-5 rounded-full bg-slate-100 text-slate-500 text-xs flex items-center justify-center font-bold mt-0.5">{i + 1}</span>
+                <span className="text-sm text-slate-600 leading-relaxed">{step}</span>
               </li>
             ))}
           </ol>
         </div>
 
-        {/* Outcome callout */}
-        <div className={`rounded-xl border ${isBuilding ? "border-amber-500/15 bg-amber-500/5" : "border-indigo-500/20 bg-indigo-500/5"} p-4`}>
+        {/* Outcome */}
+        <div className={`rounded-xl border ${accent.outcomeRing} p-4`}>
           <div className="flex items-start gap-2.5">
-            <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isBuilding ? "text-amber-400/50" : "text-indigo-400"}`} />
+            <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${accent.iconColor}`} />
             <div>
-              <p className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-1">Outcome</p>
-              <p className="text-sm text-white/70 leading-relaxed">{uc.outcome}</p>
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Outcome</p>
+              <p className="text-sm text-slate-700 leading-relaxed">{uc.outcome}</p>
             </div>
           </div>
         </div>
@@ -153,7 +124,7 @@ export default function UseCaseCard({ useCase: uc }: { useCase: UseCase }) {
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mt-4">
           {uc.tags.map((tag) => (
-            <span key={tag} className="text-xs text-white/30 border border-white/[0.08] px-2 py-0.5 rounded-md">
+            <span key={tag} className="text-xs text-slate-400 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded-md">
               {tag}
             </span>
           ))}
