@@ -191,4 +191,27 @@ export const USE_CASES: UseCase[] = [
     icon: "📋",
     tags: ["Calendar", "Email", "Teams", "Meetings"],
   },
+  {
+    id: "software-blueprint",
+    title: "Software Blueprint",
+    category: "Development",
+    description: "A multi-agent development framework that takes a plain-language brief and delivers a deployed application — Architect, Builder, Design Review, QA, Deploy, and Docs agents working in sequence.",
+    howItWorks: [
+      "Architect Agent designs the system, defines UX/design language and accessibility requirements in SPEC.md",
+      "Builder Agent (Claude Code) implements the full codebase to spec — including responsive layout, ARIA, semantic HTML",
+      "Design Review Agent visually inspects at 375/768/1280px — checks hierarchy, contrast, focus, UX quality",
+      "QA Agent runs a 20-item checklist including 7 dedicated accessibility checks",
+      "Deploy Agent pushes to Vercel, smoke tests, confirms live URL",
+      "Docs Agent updates README and CHANGELOG",
+    ],
+    outcome: "Say 'build me X' via Telegram — get a deployed, accessible, production-quality app. Human approval at SPEC review and deploy.",
+    status: "active",
+    livePreview: [
+      { label: "Agents", value: "6 specialized" },
+      { label: "Checkpoints", value: "SPEC + Deploy" },
+      { label: "Default stack", value: "Next.js + Vercel" },
+    ],
+    icon: "🏗️",
+    tags: ["Multi-Agent", "Claude Code", "GitHub", "Vercel", "Accessibility"],
+  },
 ];
