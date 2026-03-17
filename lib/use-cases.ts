@@ -192,6 +192,28 @@ export const USE_CASES: UseCase[] = [
     tags: ["Calendar", "Email", "Teams", "Meetings"],
   },
   {
+    id: "ai-automation-dashboard",
+    title: "AI Automation Stack Dashboard",
+    category: "Development",
+    description: "A live showcase dashboard built with Next.js and deployed on Vercel — displaying all active automations, data sources, and infrastructure with real-time status pulled from OpenClaw.",
+    howItWorks: [
+      "Built with Software Blueprint — Next.js App Router, MUI color system, CSS Modules",
+      "Live automation status fetched from OpenClaw cron API at page load",
+      "Hourly GitHub push from Mac mini keeps Vercel deployment current",
+      "Password-protected via NextAuth.js — single owner access",
+      "Each card shows last run, next run, and delivery status in real time",
+    ],
+    outcome: "A single URL to share at conferences and meetings that demonstrates the full AI automation stack in action — no slides needed.",
+    status: "active",
+    livePreview: [
+      { label: "Stack", value: "Next.js + Vercel" },
+      { label: "Auth", value: "NextAuth.js" },
+      { label: "Updates", value: "Hourly" },
+    ],
+    icon: "📊",
+    tags: ["Next.js", "Vercel", "GitHub", "OpenClaw", "Dashboard"],
+  },
+  {
     id: "software-blueprint",
     title: "Software Blueprint",
     category: "Development",
