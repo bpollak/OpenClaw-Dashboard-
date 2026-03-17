@@ -20,50 +20,55 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f6f8] flex items-center justify-center px-4">
-      <div className="w-full max-w-sm">
+    <div className="min-h-screen bg-[#0b0f19] flex items-center justify-center px-4">
+      {/* Background glow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-violet-600/8 rounded-full blur-3xl" />
+      </div>
 
-        {/* Wordmark */}
-        <div className="mb-8 text-center">
-          <div className="inline-flex items-center justify-center w-8 h-8 bg-slate-900 rounded-lg mb-4">
-            <span className="text-white font-bold text-sm">H</span>
+      <div className="w-full max-w-sm relative">
+        {/* Logo */}
+        <div className="text-center mb-10">
+          <div className="inline-flex w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 items-center justify-center shadow-xl shadow-indigo-500/30 mb-5">
+            <span className="text-white font-black text-lg">H</span>
           </div>
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Henry</h1>
-          <p className="text-sm text-slate-400 mt-1">AI Automation Stack</p>
+          <h1 className="text-2xl font-black text-white tracking-tight">Henry</h1>
+          <p className="text-white/40 text-sm mt-1">AI Automation Stack</p>
         </div>
 
-        {/* Form card */}
-        <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Card */}
+        <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-8 backdrop-blur-sm shadow-2xl">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+              <label className="block text-xs font-semibold text-white/40 uppercase tracking-widest mb-2.5">
                 Password
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-sm text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition"
+                className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition"
                 placeholder="Enter password"
                 autoFocus
               />
             </div>
 
             {error && (
-              <p className="text-xs text-red-500">{error}</p>
+              <p className="text-xs text-red-400">{error}</p>
             )}
 
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full bg-slate-900 hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-medium py-2.5 rounded-lg transition"
+              className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-semibold py-3 rounded-xl transition shadow-lg shadow-indigo-500/25"
             >
-              {loading ? "Signing in…" : "Continue"}
+              {loading ? "Signing in…" : "Continue →"}
             </button>
           </form>
         </div>
 
-        <p className="text-center text-xs text-slate-300 mt-6">
+        <p className="text-center text-xs text-white/20 mt-6">
           Powered by OpenClaw
         </p>
       </div>

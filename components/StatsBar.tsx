@@ -6,21 +6,27 @@ interface Props {
 }
 
 export default function StatsBar({ active, scheduled, building, total }: Props) {
-  const stats = [
-    { label: "Total", value: total, color: "text-slate-900" },
-    { label: "Live", value: active, color: "text-emerald-600" },
-    { label: "Scheduled", value: scheduled, color: "text-blue-600" },
-    { label: "In Development", value: building, color: "text-amber-600" },
-  ];
-
   return (
-    <div className="grid grid-cols-4 gap-px bg-slate-200 border border-slate-200 rounded-xl overflow-hidden mb-10">
-      {stats.map((s, i) => (
-        <div key={s.label} className={`bg-white px-6 py-5 ${i === 0 ? "" : ""}`}>
-          <div className={`text-3xl font-bold tracking-tight ${s.color}`}>{s.value}</div>
-          <div className="text-xs text-slate-400 font-medium mt-1">{s.label}</div>
+    <div className="grid grid-cols-4 gap-4 mb-12">
+      <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 p-5 shadow-lg shadow-indigo-500/20">
+        <div className="text-4xl font-black text-white mb-1">{total}</div>
+        <div className="text-indigo-200 text-xs font-medium uppercase tracking-wider">Total Automations</div>
+      </div>
+      <div className="rounded-2xl bg-white/[0.05] border border-white/10 p-5">
+        <div className="flex items-center gap-2 mb-1">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-live" />
+          <span className="text-4xl font-black text-emerald-400">{active}</span>
         </div>
-      ))}
+        <div className="text-white/40 text-xs font-medium uppercase tracking-wider">Running Live</div>
+      </div>
+      <div className="rounded-2xl bg-white/[0.05] border border-white/10 p-5">
+        <div className="text-4xl font-black text-sky-400 mb-1">{scheduled}</div>
+        <div className="text-white/40 text-xs font-medium uppercase tracking-wider">Scheduled</div>
+      </div>
+      <div className="rounded-2xl bg-white/[0.05] border border-white/10 p-5">
+        <div className="text-4xl font-black text-amber-400 mb-1">{building}</div>
+        <div className="text-white/40 text-xs font-medium uppercase tracking-wider">In Development</div>
+      </div>
     </div>
   );
 }
