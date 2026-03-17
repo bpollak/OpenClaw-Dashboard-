@@ -56,7 +56,7 @@ export const USE_CASES: UseCase[] = [
     outcome: "No important email goes unanswered. Inbox zero mindset without the work.",
     status: "active",
     schedule: "Weekdays at 5:30 PM PT",
-    privacyNote: "Sender names shown as initials + role in demo",
+    privacyNote: "Sender names anonymized in demo",
     livePreview: [
       { label: "Next run", value: "5:30 PM daily" },
       { label: "Window", value: "Last 48 hours" },
@@ -73,7 +73,7 @@ export const USE_CASES: UseCase[] = [
     howItWorks: [
       "Scans email for project milestones, wins, and notable outcomes",
       "Reads Teams channels: AI Use Cases, TritonAI Internal, AI Admin Workgroup",
-      "Checks 1:1 chats with direct reports, Anna Nordeen, Kevin Chou, AI Core Team",
+      "Checks 1:1 chats with direct reports and key stakeholders",
       "Drafts two posts: one use case walkthrough, one outcome/numbers post",
       "Delivers to Telegram for review — reply 'post 1' or 'tweak 1: [notes]'",
     ],
