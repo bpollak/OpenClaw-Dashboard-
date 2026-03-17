@@ -16,51 +16,54 @@ export default function LoginPage() {
     const res = await signIn("credentials", { password, redirect: false });
     setLoading(false);
     if (res?.ok) router.push("/");
-    else setError("Incorrect password");
+    else setError("Incorrect password.");
   }
 
   return (
-    <div className="min-h-screen bg-[#f8f9fc] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#f5f6f8] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-blue-200">
-            🤖
+
+        {/* Wordmark */}
+        <div className="mb-8 text-center">
+          <div className="inline-flex items-center justify-center w-8 h-8 bg-slate-900 rounded-lg mb-4">
+            <span className="text-white font-bold text-sm">H</span>
           </div>
-          <h1 className="text-2xl font-bold text-slate-900">Henry</h1>
-          <p className="text-slate-500 text-sm mt-1">Personal AI Automation Stack</p>
+          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Henry</h1>
+          <p className="text-sm text-slate-400 mt-1">AI Automation Stack</p>
         </div>
 
-        {/* Card */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+        {/* Form card */}
+        <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                Password
+              </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+                className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-sm text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition"
                 placeholder="Enter password"
                 autoFocus
               />
             </div>
+
             {error && (
-              <div className="bg-red-50 border border-red-100 rounded-lg px-3 py-2 text-sm text-red-600">
-                {error}
-              </div>
+              <p className="text-xs text-red-500">{error}</p>
             )}
+
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition text-sm shadow-sm"
+              className="w-full bg-slate-900 hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-medium py-2.5 rounded-lg transition"
             >
-              {loading ? "Signing in…" : "Sign in"}
+              {loading ? "Signing in…" : "Continue"}
             </button>
           </form>
         </div>
 
-        <p className="text-center text-slate-400 text-xs mt-6">
+        <p className="text-center text-xs text-slate-300 mt-6">
           Powered by OpenClaw
         </p>
       </div>

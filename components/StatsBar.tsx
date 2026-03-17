@@ -7,20 +7,18 @@ interface Props {
 
 export default function StatsBar({ active, scheduled, building, total }: Props) {
   const stats = [
-    { label: "Total Automations", value: total, icon: "⚡", bg: "bg-white", text: "text-slate-900", sub: "text-slate-500", border: "border-slate-200" },
-    { label: "Running Now", value: active, icon: "🟢", bg: "bg-white", text: "text-emerald-600", sub: "text-emerald-400", border: "border-emerald-100" },
-    { label: "Scheduled", value: scheduled, icon: "🕐", bg: "bg-white", text: "text-blue-600", sub: "text-blue-400", border: "border-blue-100" },
-    { label: "In Development", value: building, icon: "🔧", bg: "bg-white", text: "text-amber-600", sub: "text-amber-400", border: "border-amber-100" },
+    { label: "Total", value: total, color: "text-slate-900" },
+    { label: "Live", value: active, color: "text-emerald-600" },
+    { label: "Scheduled", value: scheduled, color: "text-blue-600" },
+    { label: "In Development", value: building, color: "text-amber-600" },
   ];
+
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-2">
-      {stats.map((s) => (
-        <div key={s.label} className={`${s.bg} border ${s.border} rounded-2xl p-5 shadow-sm flex items-center gap-4`}>
-          <span className="text-2xl">{s.icon}</span>
-          <div>
-            <div className={`text-3xl font-bold ${s.text}`}>{s.value}</div>
-            <div className={`text-xs font-medium ${s.sub} mt-0.5`}>{s.label}</div>
-          </div>
+    <div className="grid grid-cols-4 gap-px bg-slate-200 border border-slate-200 rounded-xl overflow-hidden mb-10">
+      {stats.map((s, i) => (
+        <div key={s.label} className={`bg-white px-6 py-5 ${i === 0 ? "" : ""}`}>
+          <div className={`text-3xl font-bold tracking-tight ${s.color}`}>{s.value}</div>
+          <div className="text-xs text-slate-400 font-medium mt-1">{s.label}</div>
         </div>
       ))}
     </div>

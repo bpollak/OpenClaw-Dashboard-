@@ -8,22 +8,21 @@ export default function Header() {
   });
 
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
+      <div className="max-w-7xl mx-auto px-8 h-14 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white text-base shadow-sm">
-            🤖
+          <div className="w-7 h-7 bg-slate-900 rounded-md flex items-center justify-center">
+            <span className="text-white font-bold text-xs tracking-tight">H</span>
           </div>
-          <div>
-            <h1 className="text-sm font-bold text-slate-900 leading-tight">Henry</h1>
-            <p className="text-xs text-slate-400 leading-tight">Brett Pollak</p>
-          </div>
+          <span className="text-sm font-semibold text-slate-900">Henry</span>
+          <span className="text-slate-300">·</span>
+          <span className="text-sm text-slate-500">Brett Pollak</span>
         </div>
-        <div className="flex items-center gap-6">
-          <p className="text-xs text-slate-400 hidden md:block">{formatted}</p>
+        <div className="flex items-center gap-8">
+          <span className="text-xs text-slate-400 hidden md:block">{formatted}</span>
           <button
             onClick={() => signOut({ callbackUrl: "/login" })}
-            className="text-xs text-slate-400 hover:text-slate-600 transition px-3 py-1.5 rounded-lg hover:bg-slate-100"
+            className="text-xs text-slate-400 hover:text-slate-700 transition"
           >
             Sign out
           </button>

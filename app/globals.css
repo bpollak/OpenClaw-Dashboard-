@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f8f9fc;
-  --foreground: #0f1724;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter);
+  background: #f5f6f8;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
 }
