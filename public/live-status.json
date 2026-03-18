@@ -3,20 +3,20 @@
     "dashboard-live-push": {
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
-      "lastStatus": "error",
-      "lastRunAtMs": 1773790979120,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773794579127,
       "lastDelivered": false,
-      "nextRunAtMs": 1773794579120,
-      "lastDurationMs": 25278
+      "nextRunAtMs": 1773798179127,
+      "lastDurationMs": 11411
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773793688653,
+      "lastRunAtMs": 1773797288661,
       "lastDelivered": false,
-      "nextRunAtMs": 1773797288653,
-      "lastDurationMs": 5876
+      "nextRunAtMs": 1773800888661,
+      "lastDurationMs": 5005
     },
     "daily-reflection": {
       "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
@@ -46,5 +46,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773794585467
+  "updatedAt": 1773798183864
 }
