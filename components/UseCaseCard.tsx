@@ -20,6 +20,7 @@ const iconMap: Record<string, React.ReactNode> = {
   "teams-integration":  <Link2 className="w-5 h-5" />,
   "local-llm":          <Cpu className="w-5 h-5" />,
   "pre-meeting-brief":  <Zap className="w-5 h-5" />,
+  "mission-control": <LayoutDashboard className="w-5 h-5" />,
   "ai-automation-dashboard": <LayoutDashboard className="w-5 h-5" />,
   "software-blueprint": <Layers className="w-5 h-5" />,
 };
@@ -33,6 +34,7 @@ const idAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing:
   "teams-integration":  { iconBg: "bg-teal-50",    iconColor: "text-teal-600",    outcomeRing: "border-teal-100 bg-teal-50",    bar: "bg-teal-500" },
   "local-llm":          { iconBg: "bg-slate-100",  iconColor: "text-slate-600",   outcomeRing: "border-slate-100 bg-slate-50",  bar: "bg-slate-500" },
   "pre-meeting-brief":  { iconBg: "bg-orange-50",  iconColor: "text-orange-600",  outcomeRing: "border-orange-100 bg-orange-50",  bar: "bg-orange-400" },
+  "mission-control": { iconBg: "bg-slate-100", iconColor: "text-slate-900", outcomeRing: "border-slate-200 bg-slate-50", bar: "bg-slate-900" },
   "ai-automation-dashboard": { iconBg: "bg-cyan-50", iconColor: "text-cyan-600", outcomeRing: "border-cyan-100 bg-cyan-50", bar: "bg-cyan-500" },
   "software-blueprint": { iconBg: "bg-purple-50",  iconColor: "text-purple-600",  outcomeRing: "border-purple-100 bg-purple-50",  bar: "bg-purple-500" },
 };
