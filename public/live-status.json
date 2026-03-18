@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773837779250,
+      "lastRunAtMs": 1773844979293,
       "lastDelivered": false,
-      "nextRunAtMs": 1773841379250,
-      "lastDurationMs": 30765
-    },
-    "opportunity-scan": {
-      "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
-      "enabled": true,
-      "lastStatus": null,
-      "lastRunAtMs": null,
-      "lastDelivered": null,
-      "nextRunAtMs": 1773842400000,
-      "lastDurationMs": null
+      "nextRunAtMs": 1773848579293,
+      "lastDurationMs": 150005
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773840488776,
+      "lastRunAtMs": 1773847688795,
       "lastDelivered": false,
-      "nextRunAtMs": 1773844088776,
-      "lastDurationMs": 26601
+      "nextRunAtMs": 1773851288795,
+      "lastDurationMs": 26574
     },
     "daily-reflection": {
       "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
@@ -39,20 +30,29 @@
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
       "enabled": true,
-      "lastStatus": null,
-      "lastRunAtMs": null,
+      "lastStatus": "error",
+      "lastRunAtMs": 1773846065967,
       "lastDelivered": null,
       "nextRunAtMs": 1773926700000,
-      "lastDurationMs": null
+      "lastDurationMs": 120022
     },
     "briefing-ai-news": {
       "id": "6f4ecf82-d3ad-466a-abfb-5b66c50a2351",
       "enabled": true,
-      "lastStatus": null,
-      "lastRunAtMs": null,
-      "lastDelivered": null,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773846186020,
+      "lastDelivered": true,
       "nextRunAtMs": 1773927300000,
-      "lastDurationMs": null
+      "lastDurationMs": 73587
+    },
+    "opportunity-scan": {
+      "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773846259620,
+      "lastDelivered": true,
+      "nextRunAtMs": 1773928800000,
+      "lastDurationMs": 106711
     },
     "linkedin-post-machine": {
       "id": "277a9379-229d-4401-8058-b46a24849dc5",
@@ -73,5 +73,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773841404852
+  "updatedAt": 1773848602975
 }
