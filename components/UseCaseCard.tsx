@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
+  "opportunity-scan":   <TrendingUp className="w-5 h-5" />,
   "morning-briefing":   <Calendar className="w-5 h-5" />,
   "email-triage":       <Mail className="w-5 h-5" />,
   "linkedin-machine":   <Linkedin className="w-5 h-5" />,
@@ -26,6 +27,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const idAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing: string; bar: string }> = {
+  "opportunity-scan":   { iconBg: "bg-green-50",   iconColor: "text-green-600",   outcomeRing: "border-green-100 bg-green-50",   bar: "bg-green-500" },
   "morning-briefing":   { iconBg: "bg-amber-50",   iconColor: "text-amber-600",   outcomeRing: "border-amber-100 bg-amber-50",   bar: "bg-amber-400" },
   "email-triage":       { iconBg: "bg-rose-50",    iconColor: "text-rose-600",    outcomeRing: "border-rose-100 bg-rose-50",    bar: "bg-rose-500" },
   "linkedin-machine":   { iconBg: "bg-blue-50",    iconColor: "text-blue-600",    outcomeRing: "border-blue-100 bg-blue-50",    bar: "bg-blue-500" },
