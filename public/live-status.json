@@ -4,19 +4,28 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773794579127,
+      "lastRunAtMs": 1773808979177,
       "lastDelivered": false,
-      "nextRunAtMs": 1773798179127,
-      "lastDurationMs": 11411
+      "nextRunAtMs": 1773812579177,
+      "lastDurationMs": 194055
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773797288661,
+      "lastRunAtMs": 1773811688701,
       "lastDelivered": false,
-      "nextRunAtMs": 1773800888661,
-      "lastDurationMs": 5005
+      "nextRunAtMs": 1773815288701,
+      "lastDurationMs": 25588
+    },
+    "opportunity-scan": {
+      "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1773842400000,
+      "lastDurationMs": null
     },
     "daily-reflection": {
       "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
@@ -46,5 +55,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773798183864
+  "updatedAt": 1773812605521
 }
