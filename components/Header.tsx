@@ -1,11 +1,4 @@
-"use client";
-import { signOut } from "next-auth/react";
-
 export default function Header() {
-  const now = new Date();
-  const time = now.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true });
-  const date = now.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
-
   return (
     <header className="bg-white border-b border-slate-100 sticky top-0 z-20 shadow-sm">
       <div className="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
@@ -22,17 +15,15 @@ export default function Header() {
             <span className="text-slate-400 text-sm">Brett Pollak</span>
           </div>
         </div>
-        <div className="flex items-center gap-6">
-          <div className="text-right hidden md:block">
-            <p className="text-slate-600 text-xs font-medium">{time}</p>
-            <p className="text-slate-400 text-xs">{date}</p>
-          </div>
-          <button
-            onClick={() => signOut({ callbackUrl: "/login" })}
-            className="text-xs text-slate-400 hover:text-slate-700 transition px-3 py-1.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50"
+        <div>
+          <a
+            href="https://brettcpollak.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-slate-400 hover:text-indigo-600 transition"
           >
-            Sign out
-          </button>
+            brettcpollak.com →
+          </a>
         </div>
       </div>
     </header>

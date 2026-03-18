@@ -1,5 +1,3 @@
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import { USE_CASES } from "@/lib/use-cases";
 import { CRON_MAP, formatRelativeTime, formatNextRun } from "@/lib/cron-map";
 import { CronJobStatus } from "@/app/api/cron-status/route";
@@ -22,8 +20,6 @@ function getLiveCronStatus(): Record<string, CronJobStatus> {
 }
 
 export default async function Dashboard() {
-  const session = await getServerSession();
-  if (!session) redirect("/login");
 
   const cronStatus = getLiveCronStatus();
 

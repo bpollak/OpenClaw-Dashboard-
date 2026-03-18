@@ -1,11 +1,7 @@
-import { withAuth } from "next-auth/middleware";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-export default withAuth({
-  pages: {
-    signIn: "/login",
-  },
-});
-
-export const config = {
-  matcher: ["/((?!login|api/auth|_next|favicon).*)"],
-};
+// Auth removed — dashboard is public
+export function middleware(_request: NextRequest) {
+  return NextResponse.next();
+}
