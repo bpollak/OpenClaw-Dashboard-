@@ -4,19 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773823379214,
+      "lastRunAtMs": 1773826979223,
       "lastDelivered": false,
-      "nextRunAtMs": 1773826979214,
-      "lastDurationMs": 31192
+      "nextRunAtMs": 1773830579223,
+      "lastDurationMs": 33990
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773826088739,
+      "lastRunAtMs": 1773829688749,
       "lastDelivered": false,
-      "nextRunAtMs": 1773829688739,
-      "lastDurationMs": 26344
+      "nextRunAtMs": 1773833288749,
+      "lastDurationMs": 30850
     },
     "opportunity-scan": {
       "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
@@ -55,5 +55,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773827007269
+  "updatedAt": 1773830604930
 }
