@@ -4,19 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773902579490,
+      "lastRunAtMs": 1773906179502,
       "lastDelivered": false,
-      "nextRunAtMs": 1773906179490,
-      "lastDurationMs": 37214
+      "nextRunAtMs": 1773909779502,
+      "lastDurationMs": 30164
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773905288475,
+      "lastRunAtMs": 1773908888485,
       "lastDelivered": false,
-      "nextRunAtMs": 1773908888475,
-      "lastDurationMs": 28331
+      "nextRunAtMs": 1773912488485,
+      "lastDurationMs": 30423
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
@@ -91,5 +91,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773906206560
+  "updatedAt": 1773909806368
 }
