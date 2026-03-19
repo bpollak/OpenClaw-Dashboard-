@@ -4,37 +4,10 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773920579549,
+      "lastRunAtMs": 1773924179556,
       "lastDelivered": false,
-      "nextRunAtMs": 1773924179549,
-      "lastDurationMs": 30769
-    },
-    "briefing-calendar-email": {
-      "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
-      "enabled": true,
-      "lastStatus": "error",
-      "lastRunAtMs": 1773846065967,
-      "lastDelivered": null,
-      "nextRunAtMs": 1773926700000,
-      "lastDurationMs": 120022
-    },
-    "graph-token-refresh": {
-      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1773923288537,
-      "lastDelivered": false,
-      "nextRunAtMs": 1773926888537,
-      "lastDurationMs": 37066
-    },
-    "briefing-ai-news": {
-      "id": "6f4ecf82-d3ad-466a-abfb-5b66c50a2351",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1773846186020,
-      "lastDelivered": true,
-      "nextRunAtMs": 1773927300000,
-      "lastDurationMs": 73587
+      "nextRunAtMs": 1773927779556,
+      "lastDurationMs": 32238
     },
     "opportunity-scan": {
       "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
@@ -44,6 +17,15 @@
       "lastDelivered": true,
       "nextRunAtMs": 1773928800000,
       "lastDurationMs": 106711
+    },
+    "graph-token-refresh": {
+      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773926888550,
+      "lastDelivered": false,
+      "nextRunAtMs": 1773930488550,
+      "lastDurationMs": 34536
     },
     "it-job-monitor": {
       "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
@@ -72,6 +54,24 @@
       "nextRunAtMs": 1773966600000,
       "lastDurationMs": 71073
     },
+    "briefing-calendar-email": {
+      "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
+      "enabled": true,
+      "lastStatus": "error",
+      "lastRunAtMs": 1773926700015,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774013100000,
+      "lastDurationMs": 90025
+    },
+    "briefing-ai-news": {
+      "id": "6f4ecf82-d3ad-466a-abfb-5b66c50a2351",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773927300013,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774013700000,
+      "lastDurationMs": 82785
+    },
     "linkedin-post-machine": {
       "id": "277a9379-229d-4401-8058-b46a24849dc5",
       "enabled": true,
@@ -91,5 +91,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773924207910
+  "updatedAt": 1773927808055
 }
