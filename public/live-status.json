@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773956579669,
+      "lastRunAtMs": 1773960179681,
       "lastDelivered": false,
-      "nextRunAtMs": 1773960179669,
-      "lastDurationMs": 28764
+      "nextRunAtMs": 1773963779681,
+      "lastDurationMs": 29166
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773959288659,
+      "lastRunAtMs": 1773962888669,
       "lastDelivered": false,
-      "nextRunAtMs": 1773962888659,
-      "lastDurationMs": 26420
-    },
-    "daily-digest": {
-      "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
-      "enabled": true,
-      "lastStatus": null,
-      "lastRunAtMs": null,
-      "lastDelivered": null,
-      "nextRunAtMs": 1773963000000,
-      "lastDurationMs": null
+      "nextRunAtMs": 1773966488669,
+      "lastDurationMs": 28441
     },
     "daily-reflection": {
       "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
@@ -72,6 +63,15 @@
       "nextRunAtMs": 1774018800000,
       "lastDurationMs": 139862
     },
+    "daily-digest": {
+      "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773963000012,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774049400000,
+      "lastDurationMs": 44982
+    },
     "linkedin-post-machine": {
       "id": "277a9379-229d-4401-8058-b46a24849dc5",
       "enabled": true,
@@ -91,5 +91,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773960205356
+  "updatedAt": 1773963804947
 }
