@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773873779389,
+      "lastRunAtMs": 1773877379396,
       "lastDelivered": false,
-      "nextRunAtMs": 1773877379389,
-      "lastDurationMs": 31807
+      "nextRunAtMs": 1773880979396,
+      "lastDurationMs": 33176
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773876488885,
+      "lastRunAtMs": 1773880088896,
       "lastDelivered": false,
-      "nextRunAtMs": 1773880088885,
-      "lastDurationMs": 25186
-    },
-    "daily-reflection": {
-      "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1773793800011,
-      "lastDelivered": true,
-      "nextRunAtMs": 1773880200000,
-      "lastDurationMs": 167998
+      "nextRunAtMs": 1773883688896,
+      "lastDurationMs": 25607
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
@@ -54,6 +45,33 @@
       "nextRunAtMs": 1773928800000,
       "lastDurationMs": 106711
     },
+    "it-job-monitor": {
+      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1773932400000,
+      "lastDurationMs": null
+    },
+    "daily-digest": {
+      "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1773963000000,
+      "lastDurationMs": null
+    },
+    "daily-reflection": {
+      "id": "e931a10e-8bf4-4b50-aa83-f6d2a0155b73",
+      "enabled": true,
+      "lastStatus": "error",
+      "lastRunAtMs": 1773880200013,
+      "lastDelivered": null,
+      "nextRunAtMs": 1773966600000,
+      "lastDurationMs": 180025
+    },
     "linkedin-post-machine": {
       "id": "277a9379-229d-4401-8058-b46a24849dc5",
       "enabled": true,
@@ -73,5 +91,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773877405105
+  "updatedAt": 1773881014320
 }
