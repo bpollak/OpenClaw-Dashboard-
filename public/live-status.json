@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774014179859,
+      "lastRunAtMs": 1774017779866,
       "lastDelivered": false,
-      "nextRunAtMs": 1774017779859,
-      "lastDurationMs": 33671
-    },
-    "it-job-monitor": {
-      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1773932400014,
-      "lastDelivered": true,
-      "nextRunAtMs": 1774018800000,
-      "lastDurationMs": 139862
+      "nextRunAtMs": 1774021379866,
+      "lastDurationMs": 30976
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774016888851,
+      "lastRunAtMs": 1774020488863,
       "lastDelivered": false,
-      "nextRunAtMs": 1774020488851,
-      "lastDurationMs": 28894
+      "nextRunAtMs": 1774024088863,
+      "lastDurationMs": 28610
     },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
@@ -90,6 +81,15 @@
       "nextRunAtMs": 1774101600000,
       "lastDurationMs": 300026
     },
+    "it-job-monitor": {
+      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774018800014,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774105200000,
+      "lastDurationMs": 156886
+    },
     "tritongpt-intel-sunday": {
       "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
       "enabled": true,
@@ -100,5 +100,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1774017807247
+  "updatedAt": 1774021406451
 }
