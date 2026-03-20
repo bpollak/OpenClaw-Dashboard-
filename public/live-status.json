@@ -4,28 +4,10 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774010579847,
+      "lastRunAtMs": 1774014179859,
       "lastDelivered": false,
-      "nextRunAtMs": 1774014179847,
-      "lastDurationMs": 29183
-    },
-    "opportunity-scan": {
-      "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
-      "enabled": true,
-      "lastStatus": "error",
-      "lastRunAtMs": 1773981810456,
-      "lastDelivered": null,
-      "nextRunAtMs": 1774015200000,
-      "lastDurationMs": 300015
-    },
-    "graph-token-refresh": {
-      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1774013288838,
-      "lastDelivered": false,
-      "nextRunAtMs": 1774016888838,
-      "lastDurationMs": 30057
+      "nextRunAtMs": 1774017779859,
+      "lastDurationMs": 33671
     },
     "it-job-monitor": {
       "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
@@ -35,6 +17,15 @@
       "lastDelivered": true,
       "nextRunAtMs": 1774018800000,
       "lastDurationMs": 139862
+    },
+    "graph-token-refresh": {
+      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774016888851,
+      "lastDelivered": false,
+      "nextRunAtMs": 1774020488851,
+      "lastDurationMs": 28894
     },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
@@ -90,6 +81,15 @@
       "nextRunAtMs": 1774100100000,
       "lastDurationMs": 35990
     },
+    "opportunity-scan": {
+      "id": "c23794ed-e53b-48fa-8dd4-4ea8355eafb6",
+      "enabled": true,
+      "lastStatus": "error",
+      "lastRunAtMs": 1774015200015,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774101600000,
+      "lastDurationMs": 300026
+    },
     "tritongpt-intel-sunday": {
       "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
       "enabled": true,
@@ -100,5 +100,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1774014209239
+  "updatedAt": 1774017807247
 }
