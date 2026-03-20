@@ -4,19 +4,10 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774003379824,
+      "lastRunAtMs": 1774006979835,
       "lastDelivered": false,
-      "nextRunAtMs": 1774006979824,
-      "lastDurationMs": 28323
-    },
-    "graph-token-refresh": {
-      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1774006088812,
-      "lastDelivered": false,
-      "nextRunAtMs": 1774009688812,
-      "lastDurationMs": 29263
+      "nextRunAtMs": 1774010579835,
+      "lastDurationMs": 31782
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
@@ -26,6 +17,15 @@
       "lastDelivered": true,
       "nextRunAtMs": 1774013100000,
       "lastDurationMs": 71043
+    },
+    "graph-token-refresh": {
+      "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774009688825,
+      "lastDelivered": false,
+      "nextRunAtMs": 1774013288825,
+      "lastDurationMs": 30248
     },
     "briefing-ai-news": {
       "id": "6f4ecf82-d3ad-466a-abfb-5b66c50a2351",
@@ -100,5 +100,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1774007006614
+  "updatedAt": 1774010603755
 }
