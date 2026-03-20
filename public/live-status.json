@@ -4,19 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774021379878,
+      "lastRunAtMs": 1774024979884,
       "lastDelivered": false,
-      "nextRunAtMs": 1774024979878,
-      "lastDurationMs": 29889
+      "nextRunAtMs": 1774028579884,
+      "lastDurationMs": 29606
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774024088875,
+      "lastRunAtMs": 1774027688889,
       "lastDelivered": false,
-      "nextRunAtMs": 1774027688875,
-      "lastDurationMs": 30418
+      "nextRunAtMs": 1774031288889,
+      "lastDurationMs": 27175
     },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
@@ -100,5 +100,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1774025005847
+  "updatedAt": 1774028605273
 }
