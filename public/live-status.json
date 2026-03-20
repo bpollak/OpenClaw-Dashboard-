@@ -4,28 +4,28 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773974579723,
+      "lastRunAtMs": 1773978179742,
       "lastDelivered": false,
-      "nextRunAtMs": 1773978179723,
-      "lastDurationMs": 28280
+      "nextRunAtMs": 1773981779742,
+      "lastDurationMs": 27973
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1773977288710,
+      "lastRunAtMs": 1773980888722,
       "lastDelivered": false,
-      "nextRunAtMs": 1773980888710,
-      "lastDurationMs": 27615
+      "nextRunAtMs": 1773984488722,
+      "lastDurationMs": 31128
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
       "enabled": true,
       "lastStatus": "error",
-      "lastRunAtMs": 1773926700015,
-      "lastDelivered": null,
+      "lastRunAtMs": 1773981739390,
+      "lastDelivered": true,
       "nextRunAtMs": 1774013100000,
-      "lastDurationMs": 90025
+      "lastDurationMs": 71043
     },
     "briefing-ai-news": {
       "id": "6f4ecf82-d3ad-466a-abfb-5b66c50a2351",
@@ -81,6 +81,15 @@
       "nextRunAtMs": 1774053000000,
       "lastDurationMs": 134559
     },
+    "openclaw-update-watch": {
+      "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1773980100014,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774066500000,
+      "lastDurationMs": 37821
+    },
     "tritongpt-intel-sunday": {
       "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
       "enabled": true,
@@ -91,5 +100,5 @@
       "lastDurationMs": null
     }
   },
-  "updatedAt": 1773978204440
+  "updatedAt": 1773981854371
 }
