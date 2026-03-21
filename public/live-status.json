@@ -4,19 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774053779974,
+      "lastRunAtMs": 1774057379985,
       "lastDelivered": false,
-      "nextRunAtMs": 1774057379974,
-      "lastDurationMs": 28379
+      "nextRunAtMs": 1774060979985,
+      "lastDurationMs": 29078
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774056489002,
+      "lastRunAtMs": 1774060089017,
       "lastDelivered": false,
-      "nextRunAtMs": 1774060089002,
-      "lastDurationMs": 28439
+      "nextRunAtMs": 1774063689017,
+      "lastDurationMs": 26246
     },
     "openclaw-update-watch": {
       "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
@@ -100,5 +100,5 @@
       "lastDurationMs": 180030
     }
   },
-  "updatedAt": 1774057405521
+  "updatedAt": 1774061005675
 }
