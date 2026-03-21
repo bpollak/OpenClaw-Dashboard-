@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774100580106,
+      "lastRunAtMs": 1774104180118,
       "lastDelivered": false,
-      "nextRunAtMs": 1774104180106,
-      "lastDurationMs": 27413
-    },
-    "it-job-monitor": {
-      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1774018800014,
-      "lastDelivered": true,
-      "nextRunAtMs": 1774105200000,
-      "lastDurationMs": 156886
+      "nextRunAtMs": 1774107780118,
+      "lastDurationMs": 29545
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774103289150,
+      "lastRunAtMs": 1774106889163,
       "lastDelivered": false,
-      "nextRunAtMs": 1774106889150,
-      "lastDurationMs": 26196
+      "nextRunAtMs": 1774110489163,
+      "lastDurationMs": 28544
     },
     "openclaw-update-watch": {
       "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
@@ -72,6 +63,15 @@
       "nextRunAtMs": 1774191600000,
       "lastDurationMs": null
     },
+    "it-job-monitor": {
+      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774105200013,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774191600000,
+      "lastDurationMs": 104524
+    },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
       "enabled": true,
@@ -100,5 +100,5 @@
       "lastDurationMs": 180030
     }
   },
-  "updatedAt": 1774104206200
+  "updatedAt": 1774107803556
 }
