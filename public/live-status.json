@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774060979996,
+      "lastRunAtMs": 1774064580008,
       "lastDelivered": false,
-      "nextRunAtMs": 1774064579996,
-      "lastDurationMs": 29311
-    },
-    "openclaw-update-watch": {
-      "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1773980100014,
-      "lastDelivered": true,
-      "nextRunAtMs": 1774066500000,
-      "lastDurationMs": 37821
+      "nextRunAtMs": 1774068180008,
+      "lastDurationMs": 30030
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774063689032,
+      "lastRunAtMs": 1774067289043,
       "lastDelivered": false,
-      "nextRunAtMs": 1774067289032,
-      "lastDurationMs": 27088
+      "nextRunAtMs": 1774070889043,
+      "lastDurationMs": 26926
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
@@ -62,6 +53,15 @@
       "lastDelivered": true,
       "nextRunAtMs": 1774105200000,
       "lastDurationMs": 156886
+    },
+    "openclaw-update-watch": {
+      "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774066500009,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774152900000,
+      "lastDurationMs": 27117
     },
     "tritongpt-intel-sunday": {
       "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
@@ -100,5 +100,5 @@
       "lastDurationMs": 180030
     }
   },
-  "updatedAt": 1774064605534
+  "updatedAt": 1774068204738
 }
