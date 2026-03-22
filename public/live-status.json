@@ -4,19 +4,28 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774204980395,
+      "lastRunAtMs": 1774208580405,
       "lastDelivered": false,
-      "nextRunAtMs": 1774208580395,
-      "lastDurationMs": 28841
+      "nextRunAtMs": 1774212180405,
+      "lastDurationMs": 28002
+    },
+    "AI Daily Brief transcript reminder": {
+      "id": "490022e4-7153-421e-a88f-4bb85928fe20",
+      "enabled": true,
+      "lastStatus": null,
+      "lastRunAtMs": null,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774214160000,
+      "lastDurationMs": null
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774207689457,
+      "lastRunAtMs": 1774211289470,
       "lastDelivered": false,
-      "nextRunAtMs": 1774211289457,
-      "lastDurationMs": 27252
+      "nextRunAtMs": 1774214889470,
+      "lastDurationMs": 30094
     },
     "openclaw-update-watch": {
       "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
@@ -100,5 +109,5 @@
       "lastDurationMs": 121042
     }
   },
-  "updatedAt": 1774208605086
+  "updatedAt": 1774212204465
 }
