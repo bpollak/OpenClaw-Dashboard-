@@ -14,7 +14,7 @@ def run(cmd, **kwargs):
     return subprocess.run(cmd, shell=True, capture_output=True, text=True, **kwargs)
 
 # Fetch cron status
-result = run("openclaw cron list --json 2>/dev/null")
+result = run("/opt/homebrew/bin/openclaw cron list --json 2>/dev/null")
 if result.returncode != 0 or not result.stdout.strip():
     print("Failed to fetch cron status:", result.stderr)
     sys.exit(1)

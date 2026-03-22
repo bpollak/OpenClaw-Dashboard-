@@ -4,15 +4,16 @@ import { CronJobStatus } from "@/app/api/cron-status/route";
 import UseCaseCard from "@/components/UseCaseCard";
 import StatsBar from "@/components/StatsBar";
 import Header from "@/components/Header";
-import { readFileSync } from "fs";
-import { join } from "path";
 
 const INFRA_CATEGORIES = ["Data Sources", "Infrastructure"];
 
-function getLiveCronStatus(): Record<string, CronJobStatus> {
+async function getLiveCronStatus(): Promise<Record<string, CronJobStatus>> {
   try {
-    const file = join(process.cwd(), "public", "live-status.json");
-    const data = JSON.parse(readFileSync(file, "utf-8"));
+    const res = await fetch("http://localhost:3006/api/cron-status", {
+      cache: "no-store",
+    });
+    if (!res.ok) return {};
+    const data = await res.json();
     return data.jobs ?? {};
   } catch {
     return {};
@@ -21,7 +22,7 @@ function getLiveCronStatus(): Record<string, CronJobStatus> {
 
 export default async function Dashboard() {
 
-  const cronStatus = getLiveCronStatus();
+  const cronStatus = await getLiveCronStatus();
 
   const automations = USE_CASES.filter((u) => !INFRA_CATEGORIES.includes(u.category));
   const infra = USE_CASES.filter((u) => INFRA_CATEGORIES.includes(u.category));
