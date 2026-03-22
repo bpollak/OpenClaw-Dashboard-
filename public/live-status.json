@@ -4,37 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774186980345,
+      "lastRunAtMs": 1774190580360,
       "lastDelivered": false,
-      "nextRunAtMs": 1774190580345,
-      "lastDurationMs": 29433
-    },
-    "tritongpt-intel-sunday": {
-      "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
-      "enabled": true,
-      "lastStatus": null,
-      "lastRunAtMs": null,
-      "lastDelivered": null,
-      "nextRunAtMs": 1774191600000,
-      "lastDurationMs": null
-    },
-    "it-job-monitor": {
-      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1774105200013,
-      "lastDelivered": true,
-      "nextRunAtMs": 1774191600000,
-      "lastDurationMs": 104524
+      "nextRunAtMs": 1774194180360,
+      "lastDurationMs": 27841
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774189689409,
+      "lastRunAtMs": 1774193289418,
       "lastDelivered": false,
-      "nextRunAtMs": 1774193289409,
-      "lastDurationMs": 25802
+      "nextRunAtMs": 1774196889418,
+      "lastDurationMs": 27081
     },
     "openclaw-update-watch": {
       "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
@@ -72,6 +54,15 @@
       "nextRunAtMs": 1774274400000,
       "lastDurationMs": 40769
     },
+    "it-job-monitor": {
+      "id": "cbfac99e-d2ad-4be2-b679-7f7cdf2cc251",
+      "enabled": true,
+      "lastStatus": "error",
+      "lastRunAtMs": 1774191721055,
+      "lastDelivered": null,
+      "nextRunAtMs": 1774278000000,
+      "lastDurationMs": 180009
+    },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
       "enabled": true,
@@ -98,7 +89,16 @@
       "lastDelivered": null,
       "nextRunAtMs": 1774656000000,
       "lastDurationMs": 180030
+    },
+    "tritongpt-intel-sunday": {
+      "id": "0985833a-ed40-4a1a-b117-9df9ca02c4f8",
+      "enabled": true,
+      "lastStatus": "error",
+      "lastRunAtMs": 1774191600013,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774796400000,
+      "lastDurationMs": 121042
     }
   },
-  "updatedAt": 1774190605101
+  "updatedAt": 1774194204871
 }
