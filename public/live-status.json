@@ -4,28 +4,19 @@
       "id": "a41a6ec8-244d-4f67-a2a1-bdc1127fcaa1",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774147380243,
+      "lastRunAtMs": 1774150980253,
       "lastDelivered": false,
-      "nextRunAtMs": 1774150980243,
-      "lastDurationMs": 28681
-    },
-    "openclaw-update-watch": {
-      "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
-      "enabled": true,
-      "lastStatus": "ok",
-      "lastRunAtMs": 1774066500009,
-      "lastDelivered": true,
-      "nextRunAtMs": 1774152900000,
-      "lastDurationMs": 27117
+      "nextRunAtMs": 1774154580253,
+      "lastDurationMs": 28399
     },
     "graph-token-refresh": {
       "id": "31dab809-eef4-4220-8ec6-60bfbad42658",
       "enabled": true,
       "lastStatus": "ok",
-      "lastRunAtMs": 1774150089299,
+      "lastRunAtMs": 1774153689308,
       "lastDelivered": false,
-      "nextRunAtMs": 1774153689299,
-      "lastDurationMs": 26697
+      "nextRunAtMs": 1774157289308,
+      "lastDurationMs": 26598
     },
     "briefing-calendar-email": {
       "id": "748fd476-eca9-4d24-a381-dba2aa341b9e",
@@ -72,6 +63,15 @@
       "nextRunAtMs": 1774191600000,
       "lastDurationMs": 104524
     },
+    "openclaw-update-watch": {
+      "id": "6a887034-75ed-4e4e-b934-3e058f3a477d",
+      "enabled": true,
+      "lastStatus": "ok",
+      "lastRunAtMs": 1774152900008,
+      "lastDelivered": true,
+      "nextRunAtMs": 1774239300000,
+      "lastDurationMs": 24204
+    },
     "daily-digest": {
       "id": "33b2db0c-7f8d-4691-9740-7ec1631fbf01",
       "enabled": true,
@@ -100,5 +100,5 @@
       "lastDurationMs": 180030
     }
   },
-  "updatedAt": 1774151005767
+  "updatedAt": 1774154605459
 }
