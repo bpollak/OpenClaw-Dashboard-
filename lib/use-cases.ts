@@ -215,6 +215,28 @@ export const USE_CASES: UseCase[] = [
     tags: ["Calendar", "Email", "Teams", "Meetings"],
   },
   {
+    id: "email-drafts",
+    title: "Email Drafts",
+    category: "Development",
+    description: "A searchable library of AI-assisted email drafts saved from Henry's voice-drafting workflow — each draft includes the original request, generated content, self-critique, and context used.",
+    howItWorks: [
+      "Henry's Brett-voice drafter skill saves every draft to workspace/docs/",
+      "Files follow naming pattern: draft-email-<topic>-YYYY-MM-DD.md",
+      "Each draft contains: subject line, body, voice notes, self-critique, and sources",
+      "Mission Control scans docs/ for draft-email-* files and displays them",
+      "Clicking a draft opens the full markdown in a readable view",
+    ],
+    outcome: "Never lose a draft. Review, refine, and reuse AI-assisted writing while keeping Brett's voice and institutional context.",
+    status: "building",
+    livePreview: [
+      { label: "Location", value: "workspace/docs/" },
+      { label: "Pattern", value: "draft-email-*.md" },
+      { label: "Latest", value: "Xavier Llamas (Google)" },
+    ],
+    icon: "✉️",
+    tags: ["Email", "Docs", "Writing", "AI Assistance"],
+  },
+  {
     id: "mission-control",
     title: "Mission Control",
     category: "Development",
