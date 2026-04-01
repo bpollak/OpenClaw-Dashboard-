@@ -12,18 +12,24 @@ import {
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
-  "opportunity-scan":   <TrendingUp className="w-5 h-5" />,
-  "morning-briefing":   <Calendar className="w-5 h-5" />,
-  "email-triage":       <Mail className="w-5 h-5" />,
-  "linkedin-machine":   <Linkedin className="w-5 h-5" />,
-  "tritongpt-intel":    <TrendingUp className="w-5 h-5" />,
-  "evening-reflection": <ClipboardList className="w-5 h-5" />,
-  "teams-integration":  <Link2 className="w-5 h-5" />,
-  "local-llm":          <Cpu className="w-5 h-5" />,
-  "pre-meeting-brief":  <Zap className="w-5 h-5" />,
-  "mission-control": <LayoutDashboard className="w-5 h-5" />,
-  "ai-automation-dashboard": <LayoutDashboard className="w-5 h-5" />,
-  "software-blueprint": <Layers className="w-5 h-5" />,
+  "opportunity-scan":           <TrendingUp className="w-5 h-5" />,
+  "morning-briefing":           <Calendar className="w-5 h-5" />,
+  "email-triage":               <Mail className="w-5 h-5" />,
+  "linkedin-machine":           <Linkedin className="w-5 h-5" />,
+  "tritongpt-intel":            <TrendingUp className="w-5 h-5" />,
+  "evening-reflection":         <ClipboardList className="w-5 h-5" />,
+  "teams-integration":          <Link2 className="w-5 h-5" />,
+  "local-llm":                  <Cpu className="w-5 h-5" />,
+  "pre-meeting-brief":          <Zap className="w-5 h-5" />,
+  "mission-control":            <LayoutDashboard className="w-5 h-5" />,
+  "ai-automation-dashboard":    <LayoutDashboard className="w-5 h-5" />,
+  "software-blueprint":         <Layers className="w-5 h-5" />,
+  "briefing-ai-news":           <TrendingUp className="w-5 h-5" />,
+  "relationship-health":        <Link2 className="w-5 h-5" />,
+  "student-signals":            <Zap className="w-5 h-5" />,
+  "it-job-monitor":             <ClipboardList className="w-5 h-5" />,
+  "knowledge-graph":            <Cpu className="w-5 h-5" />,
+  "overnight-code-maintenance": <Layers className="w-5 h-5" />,
 };
 
 const idAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing: string; bar: string }> = {
@@ -36,9 +42,15 @@ const idAccent: Record<string, { iconBg: string; iconColor: string; outcomeRing:
   "teams-integration":  { iconBg: "bg-teal-50",    iconColor: "text-teal-600",    outcomeRing: "border-teal-100 bg-teal-50",    bar: "bg-teal-500" },
   "local-llm":          { iconBg: "bg-slate-100",  iconColor: "text-slate-600",   outcomeRing: "border-slate-100 bg-slate-50",  bar: "bg-slate-500" },
   "pre-meeting-brief":  { iconBg: "bg-orange-50",  iconColor: "text-orange-600",  outcomeRing: "border-orange-100 bg-orange-50",  bar: "bg-orange-400" },
-  "mission-control": { iconBg: "bg-slate-100", iconColor: "text-slate-900", outcomeRing: "border-slate-200 bg-slate-50", bar: "bg-slate-900" },
-  "ai-automation-dashboard": { iconBg: "bg-cyan-50", iconColor: "text-cyan-600", outcomeRing: "border-cyan-100 bg-cyan-50", bar: "bg-cyan-500" },
-  "software-blueprint": { iconBg: "bg-purple-50",  iconColor: "text-purple-600",  outcomeRing: "border-purple-100 bg-purple-50",  bar: "bg-purple-500" },
+  "mission-control":            { iconBg: "bg-slate-100",   iconColor: "text-slate-900",   outcomeRing: "border-slate-200 bg-slate-50",   bar: "bg-slate-900" },
+  "ai-automation-dashboard":    { iconBg: "bg-cyan-50",     iconColor: "text-cyan-600",     outcomeRing: "border-cyan-100 bg-cyan-50",     bar: "bg-cyan-500" },
+  "software-blueprint":         { iconBg: "bg-purple-50",   iconColor: "text-purple-600",   outcomeRing: "border-purple-100 bg-purple-50",  bar: "bg-purple-500" },
+  "briefing-ai-news":           { iconBg: "bg-sky-50",      iconColor: "text-sky-600",      outcomeRing: "border-sky-100 bg-sky-50",       bar: "bg-sky-500" },
+  "relationship-health":        { iconBg: "bg-pink-50",     iconColor: "text-pink-600",     outcomeRing: "border-pink-100 bg-pink-50",     bar: "bg-pink-500" },
+  "student-signals":            { iconBg: "bg-yellow-50",   iconColor: "text-yellow-600",   outcomeRing: "border-yellow-100 bg-yellow-50", bar: "bg-yellow-500" },
+  "it-job-monitor":             { iconBg: "bg-indigo-50",   iconColor: "text-indigo-600",   outcomeRing: "border-indigo-100 bg-indigo-50", bar: "bg-indigo-500" },
+  "knowledge-graph":            { iconBg: "bg-fuchsia-50",  iconColor: "text-fuchsia-600",  outcomeRing: "border-fuchsia-100 bg-fuchsia-50", bar: "bg-fuchsia-500" },
+  "overnight-code-maintenance": { iconBg: "bg-slate-100",   iconColor: "text-slate-600",    outcomeRing: "border-slate-100 bg-slate-50",   bar: "bg-slate-600" },
 };
 
 const statusConfig = {
