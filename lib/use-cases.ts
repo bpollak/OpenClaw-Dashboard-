@@ -130,8 +130,8 @@ export const USE_CASES: UseCase[] = [
     schedule: "Daily at 7:00 AM PT",
     livePreview: [
       { label: "Next run", value: "7:00 AM daily" },
-      { label: "Sources", value: "Knowledge Graph + UCSD Data" },
-      { label: "Output", value: "1 finding" },
+      { label: "Latest pick", value: "Workforce onboarding orchestrator" },
+      { label: "Signal", value: "ServiceNow + UC Path + Graph" },
     ],
     icon: "🔍",
     tags: ["Knowledge Graph", "UCSD Data", "Research", "Intelligence"],
@@ -258,6 +258,8 @@ export const USE_CASES: UseCase[] = [
       { label: "Screens", value: "9 total" },
       { label: "Custom tools", value: "2 built" },
       { label: "Stack", value: "Next.js + Vercel" },
+    ],
+    privacyNote: "Memory and weekly synthesis changes should be reflected here when the curated memory layer changes.",
     ],
     icon: "🎛️",
     tags: ["Next.js", "Vercel", "Multi-Agent", "Operations", "Canvas"],
@@ -551,7 +553,7 @@ export const USE_CASES: UseCase[] = [
     schedule: "Weekdays at 6:30 AM PT",
     livePreview: [
       { label: "Next run", value: "Weekdays 6:30 AM" },
-      { label: "Current focus", value: "Check Henry backlog" },
+      { label: "Current focus", value: "task-henry-enh-007 shipped" },
     ],
     icon: "⚡",
     tags: ["Development", "Mission Control", "Enhancement"],
