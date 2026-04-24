@@ -553,7 +553,7 @@ export const USE_CASES: UseCase[] = [
     schedule: "Weekdays at 6:30 AM PT",
     livePreview: [
       { label: "Next run", value: "Weekdays 6:30 AM" },
-      { label: "Current focus", value: "task-henry-enh-007 shipped" },
+      { label: "Current focus", value: "task-henry-enh-009 parity sync shipped" },
     ],
     icon: "⚡",
     tags: ["Development", "Mission Control", "Enhancement"],
