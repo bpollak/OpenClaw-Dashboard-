@@ -260,7 +260,6 @@ export const USE_CASES: UseCase[] = [
       { label: "Stack", value: "Next.js + Vercel" },
     ],
     privacyNote: "Memory and weekly synthesis changes should be reflected here when the curated memory layer changes.",
-    ],
     icon: "🎛️",
     tags: ["Next.js", "Vercel", "Multi-Agent", "Operations", "Canvas"],
   },
