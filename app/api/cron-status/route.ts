@@ -9,11 +9,13 @@ export interface CronJobStatus {
   id: string;
   name: string;
   enabled: boolean;
+  status: string | null;         // computed top-level status (ok/error/skipped/idle/running/disabled)
   lastStatus: string | null;
   lastRunAtMs: number | null;
   lastDelivered: boolean | null;
   nextRunAtMs: number | null;
   lastDurationMs: number | null;
+  consecutiveErrors: number;
 }
 
 export async function GET() {
@@ -29,11 +31,13 @@ export async function GET() {
       id: j.id,
       name: j.name,
       enabled: j.enabled,
+      status: j.status ?? null,
       lastStatus: j.state?.lastStatus ?? null,
       lastRunAtMs: j.state?.lastRunAtMs ?? null,
       lastDelivered: j.state?.lastDelivered ?? null,
       nextRunAtMs: j.state?.nextRunAtMs ?? null,
       lastDurationMs: j.state?.lastDurationMs ?? null,
+      consecutiveErrors: j.state?.consecutiveErrors ?? 0,
     }));
     return NextResponse.json({ jobs, fetchedAt: Date.now() });
   } catch (e) {

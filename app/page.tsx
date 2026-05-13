@@ -40,7 +40,8 @@ export default async function Dashboard() {
     return {
       lastRun: formatRelativeTime(job.lastRunAtMs),
       nextRun: formatNextRun(job.nextRunAtMs),
-      lastStatus: job.lastStatus,
+      lastStatus: job.status ?? job.lastStatus,  // prefer computed status from new cron list --json field
+      consecutiveErrors: job.consecutiveErrors,
       delivered: job.lastDelivered,
     };
   }
