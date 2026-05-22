@@ -221,7 +221,7 @@ export default function ArchitecturePage() {
               {
                 priority: "🔴 Critical",
                 issue: "Vercel password mismatch",
-                detail: "Local password set to Powder99*, Vercel still using old value",
+                detail: "Local password and Vercel deployment password are out of sync — update via Vercel dashboard",
               },
               {
                 priority: "🔴 Critical",
